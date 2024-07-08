@@ -1,0 +1,12 @@
+import 'package:ecommere_course/core/class/crud.dart';
+import 'package:ecommere_course/linkapi.dart';
+
+class TestData {
+  Crud crud;
+  TestData(this.crud);
+  getData() async {
+    var response = await crud.postData(AppLink.test, {});
+    return response.fold((l) => l, (r) => r);
+  }
+}
+  
