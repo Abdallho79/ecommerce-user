@@ -2,7 +2,7 @@ import 'package:ecommere_course/core/constant/imgaeasset.dart';
 import 'package:flutter/material.dart';
 
 class LogoAuth extends StatelessWidget {
-  const LogoAuth({Key? key}) : super(key: key);
+  const LogoAuth({super.key});
 
   @override
   Widget build(BuildContext context) {

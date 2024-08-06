@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
                   child: controller.listPage.elementAt(controller.currentpage),
                   onWillPop: () {
                     Get.defaultDialog(
-                        titleStyle: TextStyle(
+                        titleStyle: const TextStyle(
                             fontWeight: FontWeight.bold, color: Colors.black),
                         cancelTextColor: AppColor.secondColor,
                         confirmTextColor: AppColor.secondColor,

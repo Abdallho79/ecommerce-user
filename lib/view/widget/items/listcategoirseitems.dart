@@ -6,11 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ListCategoriesItems extends GetView<ItemsControllerImp> {
-  const ListCategoriesItems({Key? key}) : super(key: key);
+  const ListCategoriesItems({super.key});
 
   @override
   Widget build(BuildContext context) {
-    
     return SizedBox(
       height: 100,
       child: ListView.separated(
@@ -32,8 +31,7 @@ class ListCategoriesItems extends GetView<ItemsControllerImp> {
 class Categories extends GetView<ItemsControllerImp> {
   final CategoriesModel categoriesModel;
   final int? i;
-  const Categories({Key? key, required this.categoriesModel, required this.i})
-      : super(key: key);
+  const Categories({super.key, required this.categoriesModel, required this.i});
 
   @override
   Widget build(BuildContext context) {

@@ -1,9 +1,9 @@
 import 'package:ecommere_course/core/class/crud.dart';
 import 'package:ecommere_course/linkapi.dart';
 
-class favoriteData {
+class FavoriteData {
   Crud crud;
-  favoriteData(this.crud);
+  FavoriteData(this.crud);
   addFavorite(String id, String itemsid) async {
     var response = await crud
         .postData(AppLink.favoriteAdd, {"usersid": id, "itemsid": itemsid});

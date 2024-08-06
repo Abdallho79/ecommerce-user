@@ -57,10 +57,10 @@ class BottomNavigationBarCart extends GetView<CartController> {
                       ],
                     )
                   : Text(
-                    "Coupon Code ${controller.couponname}",
-                    style: const TextStyle(
-                        color: AppColor.primaryColor, fontSize: 20),
-                  );
+                      "Coupon Code ${controller.couponname}",
+                      style: const TextStyle(
+                          color: AppColor.primaryColor, fontSize: 20),
+                    );
             })),
         Container(
           padding: const EdgeInsets.all(10),

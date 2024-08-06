@@ -1,11 +1,10 @@
 import 'package:ecommere_course/controller/orders/archive_controller.dart';
 import 'package:ecommere_course/core/constant/color.dart';
 import 'package:ecommere_course/core/constant/routes.dart';
-import 'package:ecommere_course/data/model/Orders_model.dart';
+import 'package:ecommere_course/data/model/orders_model.dart';
 import 'package:ecommere_course/view/widget/orders/ordersrating.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:jiffy/jiffy.dart';
 
 class CardOrderListArchvie extends GetView<ArchiveController> {

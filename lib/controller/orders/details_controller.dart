@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:ecommere_course/core/class/statusrequest.dart';
 import 'package:ecommere_course/core/functions/handingdatacontroller.dart';
 import 'package:ecommere_course/data/datasource/remote/orders/ordersdeatils_data.dart';
-import 'package:ecommere_course/data/model/Orders_model.dart';
+import 'package:ecommere_course/data/model/orders_model.dart';
 import 'package:ecommere_course/data/model/cartmodel.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
@@ -17,7 +17,7 @@ class OrdersDetailsController extends GetxController {
 
   CameraPosition? cameraPosition;
   Position? position;
-  Completer<GoogleMapController>? completer_controller;
+  Completer<GoogleMapController>? completercontroller;
   List<Marker> marker = [];
   double? long;
   double? lat;
@@ -31,22 +31,20 @@ class OrdersDetailsController extends GetxController {
   }
 
   getLocatoin() async {
-    if(ordersModel.ordersType == "0"){
-          cameraPosition = CameraPosition(
+    if (ordersModel.ordersType == "0") {
+      cameraPosition = CameraPosition(
           target: LatLng(ordersModel.addressLat!, ordersModel.addressLong!),
           zoom: 12);
       marker.add(Marker(
-          markerId: MarkerId("1"),
+          markerId: const MarkerId("1"),
           position: LatLng(ordersModel.addressLat!, ordersModel.addressLong!)));
       update();
     }
-
   }
 
   getData() async {
     statusRequest = StatusRequest.loading;
     var response = await testData.getData(ordersModel.ordersId!);
-    print("=============================== Controller $response ");
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {

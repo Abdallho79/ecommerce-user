@@ -1,7 +1,6 @@
 import 'package:ecommere_course/controller/home_controller.dart';
 import 'package:ecommere_course/core/class/statusrequest.dart';
 import 'package:ecommere_course/core/functions/handingdatacontroller.dart';
-import 'package:ecommere_course/core/services/services.dart';
 import 'package:ecommere_course/data/datasource/remote/items_data.dart';
 import 'package:ecommere_course/data/model/itemsmodel.dart';
 import 'package:flutter/widgets.dart';
@@ -24,9 +23,7 @@ class ItemsControllerImp extends SearchController {
 
   List data = [];
 
-  late StatusRequest statusRequest;
 
-  MyServices myServices = Get.find();
 
   @override
   void onInit() {
@@ -56,7 +53,6 @@ class ItemsControllerImp extends SearchController {
     statusRequest = StatusRequest.loading;
     var response = await testData.getData(
         categoryid, myServices.sharedPreferences.getString("id")!);
-    print("===============================items Controller $response ");
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       // Start backend

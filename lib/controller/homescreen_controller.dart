@@ -2,12 +2,11 @@ import 'package:ecommere_course/view/screen/home.dart';
 import 'package:ecommere_course/view/screen/notification.dart';
 import 'package:ecommere_course/view/screen/offer.dart';
 import 'package:ecommere_course/view/screen/settings.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 abstract class HomeScreenController extends GetxController {
-  changePage(int currentpage);
+  changePage(int i);
 }
 
 class HomeScreenControllerImp extends HomeScreenController {

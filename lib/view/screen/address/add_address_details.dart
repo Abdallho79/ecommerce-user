@@ -18,7 +18,7 @@ class AddAddressDetails extends StatelessWidget {
         title: const Text("Add address's Detials"),
       ),
       body: Container(
-        padding: EdgeInsets.all(15),
+        padding: const EdgeInsets.all(15),
         child: HandlingDataView(
             statusRequest: controllerDetails.statusRequest!,
             widget: ListView(
@@ -49,9 +49,8 @@ class AddAddressDetails extends StatelessWidget {
                     valid: (val) {
                       return validInput(val!, 3, 40, "username");
                     },
-                    
                     isNumber: false),
-                    CustomTextFormAuth(
+                CustomTextFormAuth(
                     hinttext: "Home",
                     labeltext: "home",
                     iconData: Icons.home,
@@ -70,7 +69,6 @@ class AddAddressDetails extends StatelessWidget {
                     },
                     isNumber: true),
                 CustomTextFormAuth(
-                  
                     hinttext: "note",
                     labeltext: "note",
                     iconData: Icons.note,

@@ -12,7 +12,7 @@ class MyFavorite extends StatelessWidget {
     Get.put(MyFavoriteController());
     return Scaffold(
       appBar: AppBar(
-        title: Text("Favorite"),
+        title: const Text("Favorite"),
       ),
       body: Container(
         padding: const EdgeInsets.all(15),

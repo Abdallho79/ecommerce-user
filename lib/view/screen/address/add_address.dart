@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class AddAddress extends StatelessWidget {
-  const AddAddress({Key? key});
+  const AddAddress({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class AddAddress extends StatelessWidget {
                             },
                             initialCameraPosition: controllerpage.kGooglePlex!,
                             onMapCreated: (GoogleMapController controllermap) {
-                              controllerpage.completer_controller!
+                              controllerpage.completercontroller!
                                   .complete(controllermap);
                             },
                           ),

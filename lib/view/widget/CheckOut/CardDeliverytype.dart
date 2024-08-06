@@ -27,7 +27,7 @@ class CardDeliveryTyoe extends StatelessWidget {
           color: isactive == true ? Colors.white : null,
         ),
         Text(
-          "$title",
+          title,
           style: TextStyle(
               color: isactive == true ? Colors.white : AppColor.secondColor,
               fontWeight: isactive == true ? FontWeight.bold : null),

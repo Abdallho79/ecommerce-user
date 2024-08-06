@@ -17,7 +17,6 @@ class ViewAddressCOntroller extends GetxController {
     update();
     var response = await addressData
         .viewData(myServices.sharedPreferences.getString("id")!);
-    print("=============================== Controller $response ");
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {
@@ -34,19 +33,15 @@ class ViewAddressCOntroller extends GetxController {
   }
 
   deletedata(String addressid) {
-    var response = addressData.removeData(addressid);
+    addressData.removeData(addressid);
     data.removeWhere((element) => element.addressId == addressid);
-    print(response);
     update();
   }
-
-  
 
   @override
   void onInit() {
     getdata();
 
-    // TODO: implement onInit
     super.onInit();
   }
 }

@@ -52,7 +52,6 @@ class HomeControllerImp extends HomeController {
   getdata() async {
     statusRequest = StatusRequest.loading;
     var response = await homedata.getData();
-    print("=============================== Controller $response ");
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {
@@ -95,7 +94,6 @@ class SearchController extends GetxController {
   dataSearch() async {
     statusRequest = StatusRequest.loading;
     var response = await homedata.searchData(search!.text);
-    print("=============================== Search $response ");
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {

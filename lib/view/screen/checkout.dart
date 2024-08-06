@@ -70,11 +70,6 @@ class CheckOut extends StatelessWidget {
                       InkWell(
                         onTap: () {
                           controller.chooseDelivary("0");
-                          print(
-                              "=============================================");
-                          print(controller.shippingaddress);
-                          print(
-                              "=============================================");
                         },
                         child: CardDeliveryTyoe(
                             imagename: AppImageAsset.deliveryImage,
@@ -103,7 +98,7 @@ class CheckOut extends StatelessWidget {
                   if (controller.data.isEmpty && controller.delivertype == "0")
                     Column(
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 30,
                         ),
                         Center(
@@ -111,7 +106,7 @@ class CheckOut extends StatelessWidget {
                             onTap: () {
                               Get.toNamed(AppRoute.addressadd);
                             },
-                            child: Text(
+                            child: const Text(
                               "You Don't Have An Address \n Click Here To Add One",
                               textAlign: TextAlign.center,
                               style: TextStyle(color: AppColor.secondColor),

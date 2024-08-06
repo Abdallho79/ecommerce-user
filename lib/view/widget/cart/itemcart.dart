@@ -50,13 +50,12 @@ class CoustomitemsCartList extends StatelessWidget {
             children: [
               SizedBox(
                 height: 40,
-                child:
-                    IconButton(onPressed: add, icon: const Icon(Icons.add)),
+                child: IconButton(onPressed: add, icon: const Icon(Icons.add)),
               ),
               SizedBox(
                 height: 30,
                 child: Text(
-                  "$count",
+                  count,
                   style: const TextStyle(fontFamily: "sans"),
                 ),
               ),

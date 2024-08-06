@@ -12,7 +12,7 @@ import 'package:get/get.dart';
 class CustomListItems extends GetView<ItemsControllerImp> {
   final ItemsModel itemsModel;
   // final bool active;
-  const CustomListItems({Key? key, required this.itemsModel}) : super(key: key);
+  const CustomListItems({super.key, required this.itemsModel});
 
   @override
   Widget build(BuildContext context) {
@@ -48,12 +48,12 @@ class CustomListItems extends GetView<ItemsControllerImp> {
                               fontWeight: FontWeight.bold)),
                       Row(
                         children: [
-                          Container(child: Icon(Icons.timer_sharp)),
-                          SizedBox(
+                          const Icon(Icons.timer_sharp),
+                          const SizedBox(
                             width: 5,
                           ),
                           Text("${controller.time} : ${controller.time2} min ",
-                              style: TextStyle(fontFamily: "sans"),
+                              style: const TextStyle(fontFamily: "sans"),
                               textAlign: TextAlign.center),
                         ],
                       ),

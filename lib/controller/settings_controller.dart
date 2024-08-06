@@ -2,17 +2,12 @@ import 'package:ecommere_course/core/constant/routes.dart';
 import 'package:ecommere_course/core/services/services.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 class SettingsController extends GetxController {
   MyServices myServices = Get.find();
   bool isActive = true;
   late List<Map<String, dynamic>> listTileData;
 
-  @override
-  void onInit() {
-    super.onInit();
-  }
 
   void logOut() {
     String userssdid = myServices.sharedPreferences.getString("id")!;

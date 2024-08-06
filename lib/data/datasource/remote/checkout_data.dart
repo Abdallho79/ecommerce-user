@@ -5,7 +5,7 @@ class CheckOutData {
   Crud crud;
   CheckOutData(this.crud);
   addCheckOut(Map data) async {
-    var response = await crud.postData(AppLink.CheckOut, data);
+    var response = await crud.postData(AppLink.checkout, data);
     return response.fold((l) => l, (r) => r);
   }
 }

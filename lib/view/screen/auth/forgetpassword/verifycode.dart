@@ -7,7 +7,7 @@ import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
 
 class VerfiyCode extends StatelessWidget {
-  const VerfiyCode({Key? key}) : super(key: key);
+  const VerfiyCode({super.key});
 
   @override
   Widget build(BuildContext context) {

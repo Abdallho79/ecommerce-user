@@ -10,8 +10,7 @@ import 'package:get/get.dart';
 class CoustomMyFavorite extends GetView<MyFavoriteController> {
   final FavoriteModel itemsModel;
   // final bool active;
-  const CoustomMyFavorite({Key? key, required this.itemsModel})
-      : super(key: key);
+  const CoustomMyFavorite({super.key, required this.itemsModel});
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -29,7 +28,7 @@ class CoustomMyFavorite extends GetView<MyFavoriteController> {
                     tag: "${itemsModel.itemsId}",
                     child: CachedNetworkImage(
                       imageUrl:
-                          AppLink.imagestItems + "/" + itemsModel.itemsImage!,
+                          "${AppLink.imagestItems}/${itemsModel.itemsImage!}",
                       height: 100,
                       fit: BoxFit.fill,
                     ),
@@ -87,8 +86,3 @@ class CoustomMyFavorite extends GetView<MyFavoriteController> {
         ));
   }
 }
-
-
-
-
-

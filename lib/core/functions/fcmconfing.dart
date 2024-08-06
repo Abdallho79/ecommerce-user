@@ -8,7 +8,6 @@ import 'package:get/get.dart';
 fcmConFing() {
   FirebaseMessaging.onMessage.listen((event) {
     // يتم استاعدئهم في LocaleController
-    print("==================fcmConFing===============");
     FlutterRingtonePlayer.playNotification();
     refrechPage(event.data);
     Get.snackbar(event.notification!.title!, event.notification!.body!);
@@ -16,9 +15,6 @@ fcmConFing() {
 }
 
 refrechPage(data) {
-  print("========================================");
-  print(Get.currentRoute);
-  print("========================================");
   if (Get.currentRoute == "/orderabinding" &&
       data["pagename"] == "refrechorder") {
     BindingController controller = Get.find();

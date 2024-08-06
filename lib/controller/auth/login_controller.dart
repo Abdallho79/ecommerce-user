@@ -38,7 +38,6 @@ class LoginControllerImp extends LoginController {
       statusRequest = StatusRequest.loading;
       update();
       var response = await loginData.postdata(email.text, password.text);
-      print("=============================== Controller $response ");
       statusRequest = handlingData(response);
       if (StatusRequest.success == statusRequest) {
         if (response['status'] == "success") {
@@ -78,8 +77,6 @@ class LoginControllerImp extends LoginController {
   @override
   void onInit() {
     FirebaseMessaging.instance.getToken().then((value) {
-      print(value);
-      // String? token = value;
     });
     email = TextEditingController();
     password = TextEditingController();

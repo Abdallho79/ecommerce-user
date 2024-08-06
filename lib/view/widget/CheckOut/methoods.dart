@@ -21,7 +21,7 @@ class MethodsOfPaymant extends StatelessWidget {
         color: isactive == true ? AppColor.primaryColor : AppColor.thirdColor,
       ),
       child: Text(
-        "$name",
+        name,
         style: TextStyle(
             color: isactive == true ? Colors.white : AppColor.secondColor,
             fontWeight: FontWeight.bold,

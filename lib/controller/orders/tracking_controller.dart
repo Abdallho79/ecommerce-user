@@ -1,10 +1,8 @@
-import 'dart:async';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ecommere_course/core/class/statusrequest.dart';
-import 'package:ecommere_course/core/functions/polyLine.dart';
 import 'package:ecommere_course/core/services/services.dart';
-import 'package:ecommere_course/data/model/Orders_model.dart';
+import 'package:ecommere_course/data/model/orders_model.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -33,18 +31,15 @@ class TrackingOrdersController extends GetxController {
     update();
   }
 
-
   getDeliveryLocation() {
     FirebaseFirestore.instance
         .collection("delivery")
         .doc(ordersModel.ordersId)
         .snapshots()
         .listen((event) {
-      if (event != null) {
-        destlat = event.get("Lat");
-        destlong = event.get("Long");
-        updateMarekerDelivery(destlat!, destlong!);
-      }
+      destlat = event.get("Lat");
+      destlong = event.get("Long");
+      updateMarekerDelivery(destlat!, destlong!);
     });
   }
 
@@ -69,7 +64,7 @@ class TrackingOrdersController extends GetxController {
     gmc!.dispose();
     super.onClose();
   }
-  
+
   // initPolyLine() async {
   //   destlat = ordersModel.addressLat!;
   //   destlong = ordersModel.addressLong!;

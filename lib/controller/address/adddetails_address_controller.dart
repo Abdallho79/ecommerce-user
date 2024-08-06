@@ -24,9 +24,6 @@ class AddAddressControllerDetails extends GetxController {
     update();
     lat = Get.arguments["lat"].toString();
     long = Get.arguments["long"].toString();
-    print(lat);
-    print(long);
-
     statusRequest = StatusRequest.success;
     update();
   }
@@ -45,7 +42,6 @@ class AddAddressControllerDetails extends GetxController {
         home!.text,
         floor!.text,
         note!.text);
-    print("=============================== Controller $response ");
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       Get.offAllNamed(AppRoute.homepage);

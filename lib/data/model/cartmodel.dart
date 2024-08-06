@@ -56,24 +56,24 @@ class CartModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['itemsprice'] = this.itemspricetotal;
-    data['countitems'] = this.countitems;
-    data['cart_id'] = this.cartId;
-    data['cart_itemsid'] = this.cartItemsid;
-    data['cart_usersid'] = this.cartUsersid;
-    data['items_id'] = this.itemsId;
-    data['items_name'] = this.itemsName;
-    data['items_name_ar'] = this.itemsNameAr;
-    data['items_desc'] = this.itemsDesc;
-    data['items_desc_ar'] = this.itemsDescAr;
-    data['items_image'] = this.itemsImage;
-    data['items_count'] = this.itemsCount;
-    data['items_active'] = this.itemsActive;
-    data['items_price'] = this.itemsPrice;
-    data['items_discount'] = this.itemsDiscount;
-    data['items_date'] = this.itemsDate;
-    data['items_cat'] = this.itemsCat;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['itemsprice'] = itemspricetotal;
+    data['countitems'] = countitems;
+    data['cart_id'] = cartId;
+    data['cart_itemsid'] = cartItemsid;
+    data['cart_usersid'] = cartUsersid;
+    data['items_id'] = itemsId;
+    data['items_name'] = itemsName;
+    data['items_name_ar'] = itemsNameAr;
+    data['items_desc'] = itemsDesc;
+    data['items_desc_ar'] = itemsDescAr;
+    data['items_image'] = itemsImage;
+    data['items_count'] = itemsCount;
+    data['items_active'] = itemsActive;
+    data['items_price'] = itemsPrice;
+    data['items_discount'] = itemsDiscount;
+    data['items_date'] = itemsDate;
+    data['items_cat'] = itemsCat;
     return data;
   }
 }

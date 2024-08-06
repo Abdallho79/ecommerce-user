@@ -26,7 +26,7 @@ class ProductDetailsControllerImp extends ProductDetailsController {
     {"name": "black", "id": 3, "active": '1'}
   ];
 
-      MyServices myServices = Get.find();
+  MyServices myServices = Get.find();
   CartDat cartDat = CartDat(Get.find());
 
   cartAdd(String itemsid) async {
@@ -65,7 +65,6 @@ class ProductDetailsControllerImp extends ProductDetailsController {
   cartCount(String itemsid) async {
     var response = await cartDat.countCart(
         myServices.sharedPreferences.getString("id")!, itemsid);
-    print(response);
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {

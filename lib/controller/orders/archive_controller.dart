@@ -3,7 +3,7 @@ import 'package:ecommere_course/core/functions/handingdatacontroller.dart';
 import 'package:ecommere_course/core/services/services.dart';
 import 'package:ecommere_course/data/datasource/remote/orders/orders_data.dart';
 import 'package:ecommere_course/data/datasource/remote/orders/rating_data.dart';
-import 'package:ecommere_course/data/model/Orders_model.dart';
+import 'package:ecommere_course/data/model/orders_model.dart';
 import 'package:get/get.dart';
 
 class ArchiveController extends GetxController {
@@ -19,7 +19,6 @@ class ArchiveController extends GetxController {
     update();
     var response = await archivedata
         .orderArchive(myServices.sharedPreferences.getString("id")!);
-    print("=============================== Controller $response ");
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {
@@ -38,7 +37,6 @@ class ArchiveController extends GetxController {
     update();
     var response =
         await ratingData.getData(ordersid, comment, rating.toString());
-    print("=============================== Controller $response ");
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {

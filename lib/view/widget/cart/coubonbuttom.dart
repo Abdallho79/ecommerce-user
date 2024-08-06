@@ -5,12 +5,11 @@ class CustomButtomCoubon extends StatelessWidget {
   final String textbutton;
   final void Function()? onPressed;
   const CustomButtomCoubon(
-      {Key? key, required this.textbutton, required this.onPressed})
-      : super(key: key);
+      {super.key, required this.textbutton, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: MaterialButton(
         color: AppColor.primaryColor,

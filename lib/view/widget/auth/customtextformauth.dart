@@ -11,7 +11,7 @@ class CustomTextFormAuth extends StatelessWidget {
   final void Function()? onTapIcon;
 
   const CustomTextFormAuth(
-      {Key? key,
+      {super.key,
       this.obscureText,
       this.onTapIcon,
       required this.hinttext,
@@ -19,8 +19,7 @@ class CustomTextFormAuth extends StatelessWidget {
       required this.iconData,
       required this.mycontroller,
       required this.valid,
-      required this.isNumber})
-      : super(key: key);
+      required this.isNumber});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +31,7 @@ class CustomTextFormAuth extends StatelessWidget {
             : TextInputType.text,
         validator: valid,
         controller: mycontroller,
-        obscureText: obscureText == null || obscureText == false  ? false : true,
+        obscureText: obscureText == null || obscureText == false ? false : true,
         decoration: InputDecoration(
             hintText: hinttext,
             hintStyle: const TextStyle(fontSize: 14),
@@ -42,7 +41,7 @@ class CustomTextFormAuth extends StatelessWidget {
             label: Container(
                 margin: const EdgeInsets.symmetric(horizontal: 9),
                 child: Text(labeltext)),
-            suffixIcon: InkWell(child: Icon(iconData), onTap: onTapIcon),
+            suffixIcon: InkWell(onTap: onTapIcon, child: Icon(iconData)),
             border:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(30))),
       ),

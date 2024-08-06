@@ -13,7 +13,7 @@ Future<bool> alertExitApp() {
         ElevatedButton(
             style: ButtonStyle(
                 backgroundColor:
-                    MaterialStateProperty.all(AppColor.primaryColor)),
+                    WidgetStateProperty.all(AppColor.primaryColor)),
             onPressed: () {
               exit(0);
             },
@@ -21,7 +21,7 @@ Future<bool> alertExitApp() {
         ElevatedButton(
             style: ButtonStyle(
                 backgroundColor:
-                    MaterialStateProperty.all(AppColor.primaryColor)),
+                    WidgetStateProperty.all(AppColor.primaryColor)),
             onPressed: () {
               Get.back();
             },

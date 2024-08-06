@@ -12,8 +12,7 @@ import 'package:get/get.dart';
 class CustomListItemsOffer extends GetView<OfferController> {
   final ItemsModel itemsModel;
   // final bool active;
-  const CustomListItemsOffer({Key? key, required this.itemsModel})
-      : super(key: key);
+  const CustomListItemsOffer({super.key, required this.itemsModel});
 
   @override
   Widget build(BuildContext context) {

@@ -32,10 +32,6 @@ class ItemsHome extends GetView<HomeControllerImp> {
     return InkWell(
       onTap: () {
         controller.goToPageProductDetails(itemsModel);
-        print("================================================");
-        print(itemsModel.itemsPrice);
-        print(itemsModel.itemsDiscount);
-        print("================================================");
       },
       child: Stack(
         children: [

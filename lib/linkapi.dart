@@ -49,7 +49,7 @@ class AppLink {
   // Coupon
   static const String checkcoupon = "$server/coupon/checkcoupon.php";
   // CheckOut
-  static const String CheckOut = "$server/orders/checkout.php";
+  static const String checkout = "$server/orders/checkout.php";
   // Orders
   static const String bindingorder = "$server/orders/binding.php";
   static const String archiveorder = "$server/orders/archive.php";
@@ -60,5 +60,4 @@ class AppLink {
   static const String notification = "$server/notification.php";
   //Offers
   static const String offers = "$server/offer/offer.php";
-
 }

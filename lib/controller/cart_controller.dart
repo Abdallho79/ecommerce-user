@@ -92,7 +92,6 @@ class CartController extends GetxController {
     update();
     var response =
         await cartDat.viewCart(myServices.sharedPreferences.getString("id")!);
-    print("==============CartView=======$response========");
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {
@@ -115,7 +114,6 @@ class CartController extends GetxController {
     statusRequest = StatusRequest.loading;
     update();
     var response = await cartDat.checkCoupon(coboncontroller!.text);
-    print("==============CartView=======$response========");
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {

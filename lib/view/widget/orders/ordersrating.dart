@@ -34,15 +34,14 @@ void showDialogRating(BuildContext context, String ordersid) {
               height: 200,
             ),
             submitButtonText: 'Submit',
-            submitButtonTextStyle: TextStyle(
+            submitButtonTextStyle: const TextStyle(
                 color: AppColor.primaryColor, fontWeight: FontWeight.bold),
             commentHint: 'Set your custom comment hint',
-            onCancelled: () => print('cancelled'),
+            onCancelled: () {},
             onSubmitted: (response) {
               ArchiveController controller = Get.put(ArchiveController());
               controller.sendRating(
                   response.rating, response.comment, ordersid);
-              print('rating: ${response.rating}, comment: ${response.comment}');
             },
           ));
 }

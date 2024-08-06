@@ -1,10 +1,9 @@
 import 'package:ecommere_course/controller/orders/pinding_controller.dart';
 import 'package:ecommere_course/core/constant/color.dart';
 import 'package:ecommere_course/core/constant/routes.dart';
-import 'package:ecommere_course/data/model/Orders_model.dart';
+import 'package:ecommere_course/data/model/orders_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:jiffy/jiffy.dart';
 
 class CardOrderList extends GetView<BindingController> {
@@ -24,7 +23,7 @@ class CardOrderList extends GetView<BindingController> {
                 style:
                     const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
-              Spacer(),
+              const Spacer(),
               // Text()
               // From X
               Text(
@@ -59,7 +58,7 @@ class CardOrderList extends GetView<BindingController> {
                 textColor: AppColor.secondColor,
                 child: const Text("details"),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               if (model.ordersStatus == "3")

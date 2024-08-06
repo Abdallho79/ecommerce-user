@@ -8,8 +8,8 @@ class CheckOutChoose extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      "$title",
-      style: TextStyle(
+      title,
+      style: const TextStyle(
           color: AppColor.primaryColor,
           fontSize: 16,
           fontWeight: FontWeight.bold),

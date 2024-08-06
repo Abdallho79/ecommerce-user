@@ -14,45 +14,43 @@ class NotificationView extends StatelessWidget {
     return GetBuilder<NotificationController>(
         builder: (controller) => HandlingDataView(
             statusRequest: controller.statusRequest,
-            widget: Container(
-              child: ListView(
-                children: [
-                  const Center(
-                    child: Text(
-                      "Notification",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: AppColor.primaryColor),
-                    ),
+            widget: ListView(
+              children: [
+                const Center(
+                  child: Text(
+                    "Notification",
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: AppColor.primaryColor),
                   ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  ...List.generate(
-                      controller.data.length,
-                      (index) => Stack(
-                            children: [
-                              Positioned(
-                                  right: 20,
-                                  child: Text(
-                                    Jiffy.parse(controller.data[index]
-                                            ["notification_time"])
-                                        .fromNow(),
-                                    style: const TextStyle(
-                                        color: AppColor.primaryColor,
-                                        fontWeight: FontWeight.bold),
-                                  )),
-                              ListTile(
-                                title: Text(controller.data[index]
-                                    ["notification_title"]),
-                                subtitle: Text(controller.data[index]
-                                    ["notification_body"]),
-                              ),
-                            ],
-                          ))
-                ],
-              ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                ...List.generate(
+                    controller.data.length,
+                    (index) => Stack(
+                          children: [
+                            Positioned(
+                                right: 20,
+                                child: Text(
+                                  Jiffy.parse(controller.data[index]
+                                          ["notification_time"])
+                                      .fromNow(),
+                                  style: const TextStyle(
+                                      color: AppColor.primaryColor,
+                                      fontWeight: FontWeight.bold),
+                                )),
+                            ListTile(
+                              title: Text(controller.data[index]
+                                  ["notification_title"]),
+                              subtitle: Text(controller.data[index]
+                                  ["notification_body"]),
+                            ),
+                          ],
+                        ))
+              ],
             )));
   }
 }

@@ -34,10 +34,9 @@ class MyFavoriteController extends GetxController {
   }
 
   deleteItems(String id) {
-    var response = favoriteData.deleteFavorite(id);
+ favoriteData.deleteFavorite(id);
 
     data.removeWhere((element) => element.favoriteId == id);
-    print(response);
     update();
   }
 

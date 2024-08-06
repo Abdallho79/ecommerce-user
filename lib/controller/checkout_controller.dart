@@ -39,7 +39,6 @@ class CheckOutCOntroller extends GetxController {
     statusRequest = StatusRequest.loading;
     var response = await addressData
         .viewData(myServices.sharedPreferences.getString("id")!);
-    print("=============================== CheckoutAddress $response ");
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {
@@ -79,7 +78,6 @@ class CheckOutCOntroller extends GetxController {
     statusRequest = StatusRequest.loading;
     update();
     var response = await checkOutData.addCheckOut(data1);
-    print("=============================== addCheckout $response ");
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {
